@@ -1,0 +1,178 @@
+@use "sass:math";
+
+// Connection of mixins
+@import "base/mixins.scss";
+
+// Connection of Google fonts
+// &display=swap
+@import url(https://fonts.googleapis.com/css?family=Bebas+Neue:regular&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:regular,500&display=swap);
+
+// Connection of local fonts
+// @import "fonts/fonts";
+
+// Connection of icon fonts
+@import "fonts/icons";
+
+// ============================================================================
+
+// Settings template
+
+// Default font
+$fontFamily: "Open Sans", sans-serif;
+$fontFamily2: "Bebas Neue", sans-serif;
+$fontSize: rem(16);
+
+// Primary colors
+
+html[data-theme="dark"] {
+  --mainColor: #ffffff;
+  --mainBg: #212122;
+  --toDoBg: #333333;
+  --bdColor: rgba(255, 255, 255, 0.5);
+  --scrollColor: #808080;
+  --scrollBg: #424242;
+}
+
+html[data-theme="light"] {
+  --mainColor: #333333;
+  --mainBg: #a8a8a87e;
+  --toDoBg: #ffffff;
+  --bdColor: rgba(51, 51, 51, 0.5);
+  --scrollColor: #a3a3a3;
+  --scrollBg: #f1f1f1;
+}
+
+$mainColor: var(--mainColor);
+$mainBg: var(--mainBg);
+$toDoBg: var(--toDoBg);
+$bdColor: var(--bdColor);
+$scrollColor: var(--scrollColor);
+$scrollBg: var(--scrollBg);
+
+// ============================================================================
+
+// Adaptive grid settings
+
+// The minimum page width
+$minWidth: 320;
+// The width of the canvas
+$maxWidth: 1440;
+// The width of the limiting container
+$maxWidthContainer: 800;
+// General indenter
+$containerPadding: 30;
+
+// The width of the first breakpoint
+$containerWidth: $maxWidthContainer + $containerPadding;
+
+// Breakpoints
+$pc: rem($containerWidth);
+$tablet: rem(991.98);
+$mobile: rem(767.98);
+$mobileSmall: rem(479.98);
+
+// Adaptive type:
+// 1 = responsiveness
+// !1 = according to breakpoints
+$adaptiveType: 1;
+
+// ============================================================================
+
+// Reset
+@import "base/reset.scss";
+
+// Lock scroll
+body._lock {
+  overflow: hidden;
+}
+
+// Shell wrapper
+#__next {
+  min-height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+
+  // Press the footer
+  > main {
+    flex: 1 1 auto;
+  }
+}
+
+// Custom scrollbar
+::-webkit-scrollbar {
+  width: rem(10);
+  background-color: $scrollBg;
+
+  &-thumb {
+    border-radius: rem(5);
+    background-color: $scrollColor;
+  }
+}
+
+// Limiting container
+@if $adaptiveType == 1 {
+  // Responsive
+  [class*="__container"] {
+    @if $maxWidthContainer > 0 {
+      max-width: rem($containerWidth);
+      margin: 0 auto;
+    }
+
+    @if $containerPadding > 0 {
+      @if $maxWidthContainer > 0 {
+        padding: 0 rem(math.div($containerPadding, 2));
+      }
+    } @else {
+      @include responsiveValue(
+        padding-left,
+        math.div($containerPadding, 2),
+        15
+      );
+      @include responsiveValue(
+        padding-right,
+        math.div($containerPadding, 2),
+        15
+      );
+    }
+  }
+} @else {
+  // According to breakpoints
+  [class*="__container"] {
+    margin: 0 auto;
+
+    @if $maxWidthContainer > 0 {
+      max-width: rem($containerWidth);
+    } @else {
+      @if $containerPadding > 0 {
+        padding: 0 rem(math.div($containerPadding, 2));
+      }
+    }
+
+    @media (max-width: $pc) {
+      max-width: rem(970);
+    }
+
+    @media (max-width: $tablet) {
+      max-width: rem(750);
+    }
+
+    @media (max-width: $mobile) {
+      max-width: none;
+    }
+
+    @if $containerPadding > 0 and $maxWidthContainer > 0 {
+      padding: 0 rem(math.div($containerPadding, 2));
+    }
+  }
+}
+
+// Connecting basic styles, templates and auxiliary classes
+@import "base.scss";
+
+// Connecting styles of individual blocks
+@import "@/components/layout/Header/Header.scss";
+
+@import "@/components/screens/home/Home.scss";
+@import "@/components/screens/404/404.scss";

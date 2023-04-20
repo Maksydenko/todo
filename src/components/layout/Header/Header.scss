@@ -1,0 +1,27 @@
+@import "./ThemeSwitcher/ThemeSwitcher.scss";
+@import "./ScrollTop/ScrollTop.scss";
+
+.header {
+  position: relative;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: rem(70);
+    font-size: rem(40);
+  }
+
+  &__logo {
+    font-family: $fontFamily2;
+  }
+
+  a,
+  button {
+    transition: all 0.3s ease 0s;
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+}

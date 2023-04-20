@@ -1,0 +1,54 @@
+.tabs {
+  // .tabs__titles
+
+  &__titles {
+    display: flex;
+    gap: em(5);
+    font-weight: 500;
+
+    @media (max-width: $mobile) {
+      font-size: rem(14);
+    }
+  }
+
+  &__title {
+    flex: 0 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    color: $mainColor;
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+
+    @media (max-width: $mobile) {
+      span {
+        display: block;
+        padding: 0 em(5);
+        text-align: center;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+
+    &:hover {
+      opacity: 0.5;
+    }
+
+    &._active {
+      opacity: 0.5;
+      cursor: default;
+    }
+  }
+
+  // .tabs__contents
+
+  &__contents {
+  }
+
+  // .tabs__content
+
+  &__content {
+  }
+}

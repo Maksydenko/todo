@@ -1,0 +1,28 @@
+.header {
+  // .header__scroll-top
+
+  &__scroll-top {
+    position: fixed;
+    z-index: 10;
+    bottom: rem(40);
+    right: rem(20);
+    padding: rem(5);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.5;
+    }
+
+    &._hidden {
+      visibility: hidden;
+      opacity: 0;
+    }
+  }
+
+  // .header__arrow-top
+
+  &__arrow-top {
+    font-size: rem(40);
+  }
+}

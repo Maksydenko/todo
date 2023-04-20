@@ -1,0 +1,67 @@
+.to-do {
+  // .to-do__item
+
+  &__item {
+    &_completed {
+      .to-do__checkbox {
+        opacity: 0.5;
+      }
+
+      .to-do__text {
+        opacity: 0.5;
+        text-decoration: line-through;
+      }
+    }
+  }
+
+  // .to-do__checkbox
+
+  &__checkbox {
+    cursor: pointer;
+
+    input {
+      display: none;
+    }
+
+    input:checked + span:before {
+      @extend %icon;
+      content: "\ea10";
+      position: absolute;
+      top: rem(3);
+      left: rem(3);
+    }
+  }
+
+  // .to-do__text
+
+  &__text {
+    flex: 1 1 auto;
+    word-break: break-word;
+
+    @media (max-width: $mobile) {
+      font-size: rem(14);
+    }
+  }
+
+  // .to-do__popup-warning
+
+  &__popup-change {
+    display: flex;
+    align-items: center;
+    gap: rem(15);
+  }
+
+  // .to-do__change-input
+
+  &__change-input {
+    min-width: em(500);
+
+    @media (max-width: $mobile) {
+      min-width: em(300);
+    }
+
+    @media (max-width: $mobileSmall) {
+      min-width: auto;
+    }
+  }
+}

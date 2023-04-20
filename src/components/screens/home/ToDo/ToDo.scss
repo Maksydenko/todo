@@ -1,0 +1,138 @@
+@import "./AddTask/AddTask.scss";
+@import "./Body/TaskList/TaskList.scss";
+
+.to-do {
+  // .to-do__container
+
+  &__container {
+    margin-bottom: rem(15);
+
+    & > div {
+      padding: rem(20);
+      border-radius: rem(10);
+      background-color: $toDoBg;
+    }
+  }
+
+  // .to-do__add-task
+
+  &__add-task {
+    margin-bottom: rem(15);
+  }
+
+  // .task-list__item
+
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: rem(20);
+    padding: rem(20) 0;
+    line-height: 1.3;
+
+    @media (max-width: $mobile) {
+      gap: rem(15);
+    }
+
+    &:not(:first-child) {
+      padding-top: rem(15);
+      border-top: rem(1) solid $bdColor;
+    }
+
+    &:not(:last-child) {
+      padding-bottom: rem(15);
+      border-bottom: rem(1) solid $bdColor;
+    }
+
+    > *:first-child {
+      padding-left: rem(5);
+    }
+
+    > *:last-child {
+      padding-right: rem(5);
+    }
+
+    [class*="__checkbox"] {
+      span {
+        display: block;
+        position: relative;
+        width: rem(25);
+        height: rem(25);
+        border: rem(2) solid;
+        border-radius: 50%;
+
+        @media (max-width: $mobile) {
+          width: rem(23);
+          height: rem(23);
+          font-size: rem(14);
+        }
+      }
+    }
+
+    [class*="__action"] {
+      display: block;
+      padding-top: rem(3.5);
+      padding-bottom: rem(3.5);
+    }
+  }
+
+  // .to-do__body
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    min-height: rem(500);
+  }
+
+  // .to-do__task-list
+
+  &__tabs {
+    flex: 1 1 auto;
+  }
+
+  // .to-do__popup
+
+  &__popup {
+    .to-do__remove-button {
+      &:hover {
+        opacity: 1;
+        color: #333333;
+        background-color: transparent;
+      }
+    }
+  }
+
+  // .to-do__remove__button
+
+  &__remove-button {
+    display: block;
+    margin: 0 auto;
+    padding: em(5);
+    font-weight: 500;
+    border-radius: em(5);
+    border: em(2) solid #ff0000;
+    color: #ffffff;
+    background-color: #ff0000;
+  }
+
+  // .to-do__clear__warning-text
+
+  &__warning-text {
+    margin-bottom: em(25, 18);
+    font-size: rem(18);
+  }
+
+  // .to-do__popup-button
+
+  &__popup-button {
+    display: block;
+    margin: 0 auto;
+  }
+
+  button {
+    transition: all 0.3s ease 0s;
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+}

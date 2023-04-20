@@ -1,0 +1,12 @@
+$fontPath: "../../fonts/font/font";
+
+@font-face {
+  font-family: "";
+  font-display: swap;
+  src: url("/assets/fonts/.eot");
+  src: url("/assets/fonts/.woff") format("woff"),
+    url("/assets/fonts/.ttf") format("truetype"),
+    url("/assets/fonts/.svg") format("svg");
+  font-weight: 400;
+  font-style: normal;
+}

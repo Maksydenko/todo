@@ -1,16 +1,12 @@
-const Body = ({ onActivePopup, children }) => {
-  const handleClosePopup = (e) => {
-    const { target } = e;
-    if (!target.closest(".popup__box")) {
-      onActivePopup();
-    }
-  };
+const Body = ({ children, onClick }) => {
+  const handleClick = ({ target }) =>
+    !target.closest(".popup__box") && onClick();
 
   return (
-    <div className="popup__body" onClick={handleClosePopup}>
+    <div className="popup__body" onClick={handleClick}>
       <div className="popup__content">
         <div className="popup__box">
-          <button className="popup__cross" onClick={onActivePopup}></button>
+          <button className="popup__cross" onClick={onClick}></button>
           <div className="popup__children">{children}</div>
         </div>
       </div>

@@ -1,23 +1,22 @@
-import { useActivePopup } from "./useActivePopup";
+import { useScrollLock } from "@/hooks/useScrollLock";
 
 import Body from "./Body";
 
-const Popup = ({ className, button, children }) => {
-  const { isActive, setIsActive } = useActivePopup();
-
-  const handleActivePopup = () => {
-    setIsActive(!isActive);
+const Popup = ({ className, children, button }) => {
+  const { isLockedScroll, setIsLockedScroll } = useScrollLock();
+  const handleClick = () => {
+    setIsLockedScroll(!isLockedScroll);
   };
 
   return (
     <div className={`${className}__popup popup`}>
       <button
         className={`${className}__popup-button popup__button`}
-        onClick={handleActivePopup}
+        onClick={handleClick}
       >
         {button}
       </button>
-      {isActive && <Body onActivePopup={handleActivePopup}>{children}</Body>}
+      {isLockedScroll && <Body onClick={handleClick}>{children}</Body>}
     </div>
   );
 };

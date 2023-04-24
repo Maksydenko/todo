@@ -12,21 +12,18 @@ const PopupChange = ({ toDo }) => {
 
   const editButton = <span className="to-do__action _icon-pencil"></span>;
 
-  const handleChange = (e) => {
-    const {
-      target: { value: changedText },
-    } = e;
+  const handleChange = ({ target: { value: changedText } }) => {
     setChangedText(changedText);
     dispatch(changeToDo({ id, text: changedText }));
   };
 
   return (
     <Popup className="_input to-do" button={editButton}>
-      <div className="to-do__popup-change">
-        <span className="to-do__pencil _icon-pencil"></span>
+      <div className="task-list__popup-change">
+        <span className="task-list__action _icon-pencil"></span>
         <input
           type="text"
-          className="to-do__change-input"
+          className="task-list__change-input"
           autoFocus
           value={changedText}
           onChange={handleChange}

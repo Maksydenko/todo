@@ -1,19 +1,16 @@
 import Title from "./Title";
 
-const Titles = ({ tabs, isActive, setIsActive }) => {
-  const tabsWidth = `${100 / tabs.length}%`;
-
-  const tabItems = tabs.map((tab) => (
-    <Title
-      key={tab.id}
-      tab={tab}
-      tabsWidth={tabsWidth}
-      isActive={isActive}
-      setIsActive={setIsActive}
-    />
-  ));
-
-  return <ul className="tabs__titles">{tabItems}</ul>;
-};
+const Titles = ({ tabs, isActive, setIsActive }) => (
+  <ul className="tabs__titles">
+    {tabs.map((tab) => (
+      <Title
+        key={tab.id}
+        tab={tab}
+        isActive={isActive}
+        setIsActive={setIsActive}
+      />
+    ))}
+  </ul>
+);
 
 export default Titles;

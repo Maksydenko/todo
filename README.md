@@ -1,6 +1,6 @@
 # To do
 
-<img src="public/pepe.gif" alt="Pepe" height="100">
+<img src="pepe.gif" alt="Pepe" height="100">
 
 Task management website
 

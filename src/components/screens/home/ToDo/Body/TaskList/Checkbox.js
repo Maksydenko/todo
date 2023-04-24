@@ -6,7 +6,7 @@ const Checkbox = ({ toDo }) => {
   const dispatch = useDispatch();
 
   return (
-    <label className="to-do__checkbox">
+    <label className="to-do__checkbox task-list__checkbox">
       <input
         type="checkbox"
         checked={toDo.completed}

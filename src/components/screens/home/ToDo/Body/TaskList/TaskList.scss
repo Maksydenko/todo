@@ -1,20 +1,28 @@
-.to-do {
-  // .to-do__item
+.task-list {
+  // .task-list__item
 
   &__item {
     &_completed {
-      .to-do__checkbox {
+      .task-list__checkbox {
         opacity: 0.5;
+
+        span:before {
+          @extend %icon;
+          content: "\ea10";
+          position: absolute;
+          top: rem(3);
+          left: rem(3);
+        }
       }
 
-      .to-do__text {
+      .task-list__text {
         opacity: 0.5;
         text-decoration: line-through;
       }
     }
   }
 
-  // .to-do__checkbox
+  // .task-list__checkbox
 
   &__checkbox {
     cursor: pointer;
@@ -22,17 +30,9 @@
     input {
       display: none;
     }
-
-    input:checked + span:before {
-      @extend %icon;
-      content: "\ea10";
-      position: absolute;
-      top: rem(3);
-      left: rem(3);
-    }
   }
 
-  // .to-do__text
+  // .task-list__text
 
   &__text {
     flex: 1 1 auto;
@@ -43,7 +43,7 @@
     }
   }
 
-  // .to-do__popup-warning
+  // .task-list__popup-warning
 
   &__popup-change {
     display: flex;
@@ -51,7 +51,7 @@
     gap: rem(15);
   }
 
-  // .to-do__change-input
+  // .task-list__change-input
 
   &__change-input {
     min-width: em(500);

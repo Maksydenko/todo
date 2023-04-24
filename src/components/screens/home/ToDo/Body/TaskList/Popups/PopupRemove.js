@@ -10,12 +10,12 @@ const PopupRemove = ({ toDo }) => {
 
   return (
     <Popup className="to-do" button={removeButton}>
-      <div className="to-do__popup-remove">
-        <p className="to-do__warning-text">
+      <div className="task-list__popup-remove">
+        <p className="to-do__warning-text task-list__warning-text">
           «{toDo.text}»‎ will be permanently removed!
         </p>
         <button
-          className="to-do__remove-button"
+          className="to-do__remove-button task-list__remove-button"
           onClick={() => dispatch(removeToDo(toDo.id))}
         >
           Remove task

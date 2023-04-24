@@ -1,9 +1,9 @@
-import { useRedirect } from "./useRedirect";
+import { useRedirectToHomepage } from "./useRedirectToHomepage";
 
 import Layout from "@/components/layout/Layout";
 
 const Page404 = () => {
-  const time = useRedirect();
+  const time = useRedirectToHomepage();
 
   return (
     <Layout title="Page not found" className="404-page">

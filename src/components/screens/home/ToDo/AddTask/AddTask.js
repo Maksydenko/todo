@@ -7,10 +7,7 @@ const InputTask = () => {
   const [taskText, setTaskText] = useState("");
   const dispatch = useDispatch();
 
-  const handleChange = (e) => {
-    const { target } = e;
-    setTaskText(target.value);
-  };
+  const handleChange = ({ target: { value } }) => setTaskText(value);
 
   const handleSubmit = (e) => {
     if (taskText) {
@@ -22,23 +19,22 @@ const InputTask = () => {
 
   return (
     <div className="to-do__add-task add-task">
-      <form action="#" onSubmit={handleSubmit}>
-        <div className="to-do__item add-task__body">
-          <span className="add-task__checkbox">
-            <span></span>
-          </span>
-          <input
-            className="add-task__text"
-            type="text"
-            placeholder="Add a task"
-            value={taskText}
-            onChange={handleChange}
-          />
-          <button
-            className="add-task__action _icon-plus"
-            type="submit"
-          ></button>
-        </div>
+      <form
+        action="#"
+        className="to-do__item add-task__body"
+        onSubmit={handleSubmit}
+      >
+        <span type="checkbox" className="add-task__checkbox">
+          <span></span>
+        </span>
+        <input
+          className="add-task__text"
+          type="text"
+          placeholder="Add a task"
+          value={taskText}
+          onChange={handleChange}
+        />
+        <button className="add-task__action _icon-plus" type="submit"></button>
       </form>
     </div>
   );

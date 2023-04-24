@@ -27,22 +27,17 @@ button,
 textarea {
   font-family: inherit;
   font-size: inherit;
+  color: inherit;
   background-color: inherit;
 }
 
 input,
 textarea {
   outline: none;
-  color: inherit;
 }
 
 textarea {
   resize: none;
-}
-
-a,
-button {
-  color: inherit;
 }
 
 button {
@@ -51,6 +46,7 @@ button {
 
 a {
   text-decoration: none;
+  color: inherit;
 }
 
 ul li {

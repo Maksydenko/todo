@@ -22,7 +22,7 @@ const PopupClear = () => {
             All tasks will be permanently removed!
           </p>
           <button
-            className="to-do__remove-button"
+            className="to-do__remove-button to-do__remove-button_transparent-bg"
             onClick={() => dispatch(clearToDos())}
           >
             {textButton}

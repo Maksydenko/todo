@@ -92,13 +92,6 @@
   // .to-do__popup
 
   &__popup {
-    .to-do__remove-button {
-      &:hover {
-        opacity: 1;
-        color: #333333;
-        background-color: transparent;
-      }
-    }
   }
 
   // .to-do__remove__button
@@ -112,6 +105,12 @@
     border: em(2) solid #ff0000;
     color: #ffffff;
     background-color: #ff0000;
+
+    &_transparent-bg:hover {
+      opacity: 1 !important;
+      color: #333333;
+      background-color: transparent;
+    }
   }
 
   // .to-do__clear__warning-text

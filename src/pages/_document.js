@@ -31,7 +31,7 @@ const Document = () => (
       {/* System on the image */}
       <meta
         name="twitter:image"
-        content="https://raw.githubusercontent.com/Maksydenko/todo/master/public/todo.png"
+        content="https://raw.githubusercontent.com/Maksydenko/todo/master/public/todo-png.png"
       />
       {/* Site localization */}
       <meta property="og:locale" content="en_US" />
@@ -46,7 +46,7 @@ const Document = () => (
       {/* Link to the image that will be published in the recording */}
       <meta
         property="og:image"
-        content="https://raw.githubusercontent.com/Maksydenko/todo/master/public/todo.png"
+        content="https://raw.githubusercontent.com/Maksydenko/todo/master/public/todo-png.png"
       />
       <meta property="og:image:alt" content="To do" />
       {/* Link to the current page */}

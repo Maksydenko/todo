@@ -9,12 +9,14 @@ const isDarkTheme =
 const defaultTheme = isDarkTheme ? DARK : LIGHT;
 
 export const useSwitchTheme = () => {
+  // Set the theme from local storage or the default
   const [theme, setTheme] = useState(
     localStorage.getItem("theme") || defaultTheme
   );
 
   useEffect(() => {
-    document.documentElement.setAttribute("data-theme", theme);
+    const documentElement = document.documentElement;
+    documentElement.setAttribute("data-theme", theme);
     localStorage.setItem("theme", theme);
   }, [theme]);
 

@@ -1,14 +1,14 @@
 import { useHideOnScroll } from "./useHideOnScroll";
 
 const ScrollTop = () => {
-  const hidden = useHideOnScroll();
-  const handleClick = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  };
+  const isHidden = useHideOnScroll();
+  const handleClick = () => window.scrollTo({ top: 0, behavior: "smooth" });
+  const classHidden = (className) =>
+    `${className}${isHidden ? " _hidden" : ""}`;
 
   return (
     <spanuseHideOnScroll
-      className={`header__scroll-top${hidden ? " _hidden" : ""}`}
+      className={classHidden("header__scroll-top")}
       type="button"
       onClick={handleClick}
     >

@@ -52,7 +52,7 @@ const Document = () => (
       {/* Link to the current page */}
       <meta property="og:url" content="https://maksydenko.github.io/todo/" />
       {/* Name of the site */}
-      <meta property="og:site_name" content="To do | Maksydenko" />
+      <meta property="og:site_name" content="To do" />
       <link rel="apple-touch-icon" href="/todo/todo.svg" />
       <link rel="icon" href="/todo/todo.svg" />
     </Head>

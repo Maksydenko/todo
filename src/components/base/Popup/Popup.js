@@ -4,9 +4,7 @@ import Body from "./Body";
 
 const Popup = ({ className, children, button }) => {
   const { isLockedScroll, setIsLockedScroll } = useLockScroll();
-  const handleClick = () => {
-    setIsLockedScroll(!isLockedScroll);
-  };
+  const handleClick = () => setIsLockedScroll(!isLockedScroll);
 
   return (
     <div className={`${className}__popup popup`}>

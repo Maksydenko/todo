@@ -6,14 +6,8 @@ import {
 
 const ThemeSwitcher = () => {
   const { theme, setTheme } = useSwitchTheme();
-
-  const handleSetDark = () => {
-    setTheme(DARK);
-  };
-
-  const handleSetLight = () => {
-    setTheme(LIGHT);
-  };
+  const handleSetDark = () => setTheme(DARK);
+  const handleSetLight = () => setTheme(LIGHT);
 
   return (
     <div className="header__theme-switcher">

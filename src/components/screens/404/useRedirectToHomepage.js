@@ -14,7 +14,7 @@ export const useRedirectToHomepage = () => {
       }, 1000);
       return () => clearTimeout(timer);
     }
-  }, [time]);
+  }, [time, router]);
 
   return time;
 };

@@ -7,13 +7,13 @@ const ScrollTop = () => {
     `${className}${isHidden ? " _hidden" : ""}`;
 
   return (
-    <spanuseHideOnScroll
+    <span
       className={classHidden("header__scroll-top")}
       type="button"
       onClick={handleClick}
     >
       <span className="header__arrow-top _icon-arrow-top"></span>
-    </spanuseHideOnScroll>
+    </span>
   );
 };
 

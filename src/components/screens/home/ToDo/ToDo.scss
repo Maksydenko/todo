@@ -8,9 +8,13 @@
     margin-bottom: rem(15);
 
     & > div {
-      padding: rem(20);
+      padding: rem(20) rem(15);
       border-radius: rem(10);
       background-color: $toDoBg;
+
+      @media (max-width: $mobile) {
+        padding: rem(20) rem(10);
+      }
     }
   }
 

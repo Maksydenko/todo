@@ -19,6 +19,7 @@ body {
   line-height: 1;
   color: $mainColor;
   background-color: $mainBg;
+  transition: color, background-color 0.3s ease 0s;
 }
 
 input,

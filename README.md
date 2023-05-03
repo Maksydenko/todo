@@ -8,4 +8,15 @@ Task management website
 
 🔗 **Webpage:** [link](https://maksydenko.github.io/todo/)
 
-![Technologies](https://skills.thijs.gg/icons?i=html,css,scss,js,react,redux,next,webpack,git,github,vscode)
+![HTML](https://skills.thijs.gg/icons?i=html)
+![CSS](https://skills.thijs.gg/icons?i=css)
+![SCSS](https://skills.thijs.gg/icons?i=scss)
+![JavaScript](https://skills.thijs.gg/icons?i=js)
+![TypeScript](https://skills.thijs.gg/icons?i=ts)
+![React](https://skills.thijs.gg/icons?i=react)
+![Redux](https://skills.thijs.gg/icons?i=redux)
+![Next.js](https://skills.thijs.gg/icons?i=nextjs)
+![Webpack](https://skills.thijs.gg/icons?i=webpack)
+![Git](https://skills.thijs.gg/icons?i=git)
+![GitHub](https://skills.thijs.gg/icons?i=github)
+![Visual Studio Code](https://skills.thijs.gg/icons?i=vscode)

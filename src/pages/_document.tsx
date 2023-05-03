@@ -2,7 +2,7 @@ import { FC } from "react";
 import { Html, Head, Main, NextScript } from "next/document";
 
 const Document: FC = () => (
-  <Html lang="en">
+  <Html>
     <Head>
       {/* <meta charset="utf-8" /> */}
       <meta

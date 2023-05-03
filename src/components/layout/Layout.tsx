@@ -13,7 +13,7 @@ const Layout: FC<ILayoutProps> = ({ title, className, children }) => (
   <>
     <Meta title={title} />
     <Header />
-    <main className={className}>{children}</main>
+    <main className={`${className}-page`}>{children}</main>
   </>
 );
 

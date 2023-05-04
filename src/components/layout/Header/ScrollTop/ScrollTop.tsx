@@ -2,20 +2,21 @@ import { FC } from "react";
 
 import { useHideOnScroll } from "./useHideOnScroll";
 
-const ScrollTop: FC = () => {
-  interface IGetHiddenClassName {
-    (className: string): string;
-  }
-  const getHiddenClassName: IGetHiddenClassName = (className) =>
-    `${className}${isHidden ? " _hidden" : ""}`;
+import { getModifierClassName } from "@/utils/className.util";
 
+const ScrollTop: FC = () => {
   const isHidden: boolean = useHideOnScroll();
   const handleClick = (): void =>
     window.scrollTo({ top: 0, behavior: "smooth" });
 
   return (
     <span
-      className={getHiddenClassName("header__scroll-top")}
+      className={getModifierClassName(
+        isHidden,
+        "header__scroll-top",
+        "hidden",
+        true
+      )}
       onClick={handleClick}
     >
       <span className="header__arrow-top _icon-arrow-top"></span>

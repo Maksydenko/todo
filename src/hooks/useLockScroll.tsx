@@ -14,13 +14,13 @@ export const useLockScroll: IUseLockScroll = () => {
     const body: HTMLElement = document.body;
 
     if (isLockedScroll) {
-      body.classList.add("lock");
+      body.classList.add("_lock");
     } else {
-      body.classList.remove("lock");
+      body.classList.remove("_lock");
     }
 
     return () => {
-      body.classList.remove("lock");
+      body.classList.remove("_lock");
     };
   }, [isLockedScroll]);
 

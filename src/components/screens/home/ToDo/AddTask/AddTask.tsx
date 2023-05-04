@@ -1,7 +1,7 @@
 import { FC, ChangeEvent, FormEvent, useState } from "react";
 import { useDispatch } from "react-redux";
 
-import { addToDo } from "@/store/toDoSlice";
+import { addToDo } from "@/provider/toDoSlice";
 
 const InputTask: FC = () => {
   const [taskText, setTaskText] = useState("");

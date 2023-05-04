@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { useDispatch } from "react-redux";
 
-import { completeToDo } from "@/store/toDoSlice";
+import { completeToDo } from "@/provider/toDoSlice";
 
 import { IToDo } from "@/interfaces/toDo.interface";
 

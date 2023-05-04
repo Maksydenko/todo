@@ -3,7 +3,7 @@ import { PersistGate } from "redux-persist/integration/react";
 
 import type { AppProps } from "next/app";
 
-import { store, persistor } from "@/store/store";
+import { store, persistor } from "@/provider/store";
 
 import "@/assets/scss/globals.scss";
 

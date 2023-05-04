@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { useDispatch } from "react-redux";
 
-import { removeToDo } from "@/store/toDoSlice";
+import { removeToDo } from "@/provider/toDoSlice";
 
 import Popup from "@/components/base/Popup/Popup";
 

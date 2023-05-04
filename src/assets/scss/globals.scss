@@ -6,7 +6,6 @@
 // Connection of Google fonts
 // &display=swap
 @import url(https://fonts.googleapis.com/css?family=Bebas+Neue:regular&display=swap);
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:regular,500&display=swap);
 
 // Connection of local fonts
 // @import "fonts/fonts";
@@ -19,8 +18,7 @@
 // Settings template
 
 // Default font
-$fontFamily: "Open Sans", sans-serif;
-$fontFamily2: "Bebas Neue", sans-serif;
+$fontFamily: "Bebas Neue", sans-serif;
 $fontSize: rem(16);
 
 // Primary colors

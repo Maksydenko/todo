@@ -65,9 +65,14 @@ $containerPadding: 30;
 $containerWidth: $maxWidthContainer + $containerPadding;
 
 // Breakpoints
+
+// PCs, laptops, some tablets in a horizontal position
 $pc: rem($containerWidth);
+// Tablets, some phones in the horizontal position
 $tablet: rem(991.98);
+// Large phones
 $mobile: rem(767.98);
+// Small phones
 $mobileSmall: rem(479.98);
 
 // Adaptive type:
@@ -75,30 +80,7 @@ $mobileSmall: rem(479.98);
 // !1 = according to breakpoints
 $adaptiveType: 1;
 
-// ============================================================================
-
-// Reset
-@import "base/reset.scss";
-
-// Lock scroll
-body._lock {
-  overflow: hidden;
-}
-
-// Shell wrapper
-#__next {
-  min-height: 100%;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-
-  // Press the footer
-  > main {
-    flex: 1 1 auto;
-  }
-}
-
-// Custom scrollbar
+// Scrollbar styles
 ::-webkit-scrollbar {
   width: rem(10);
   background-color: $scrollBg;
@@ -106,6 +88,38 @@ body._lock {
   &-thumb {
     border-radius: rem(5);
     background-color: $scrollColor;
+  }
+}
+
+// ============================================================================
+
+// Reset
+@import "base/reset.scss";
+
+// Body tag styles
+body {
+  // Lock scroll
+  &.lock {
+    overflow: hidden;
+    touch-action: none;
+    overscroll-behavior: none;
+  }
+}
+
+// Shell wrapper
+#__next {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+
+  @supports (overflow: clip) {
+    overflow: clip;
+  }
+
+  // Press the footer
+  > main {
+    flex: 1 1 auto;
   }
 }
 
@@ -122,10 +136,10 @@ body._lock {
     @if $containerPadding > 0 {
       @if $maxWidthContainer > 0 {
         padding: 0 rem($containerPadding / 2);
+      } @else {
+        @include responsiveValue(padding-left, $containerPadding / 2, 15);
+        @include responsiveValue(padding-right, $containerPadding / 2, 15);
       }
-    } @else {
-      @include responsiveValue(padding-left, $containerPadding / 2, 15);
-      @include responsiveValue(padding-right, $containerPadding / 2, 15);
     }
   }
 }

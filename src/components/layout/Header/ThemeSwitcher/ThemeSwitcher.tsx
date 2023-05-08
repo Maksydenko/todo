@@ -19,10 +19,10 @@ const ThemeSwitcher: FC = () => {
   return (
     <div className="header__theme-switcher">
       {theme === DARK && (
-        <button className="_icon-moon" onClick={handleSetLight}></button>
+        <button className="_icon-sun" onClick={handleSetLight}></button>
       )}
       {theme === LIGHT && (
-        <button className="_icon-sun" onClick={handleSetDark}></button>
+        <button className="_icon-moon" onClick={handleSetDark}></button>
       )}
     </div>
   );

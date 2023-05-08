@@ -16,10 +16,10 @@ interface ILayoutProps {
 const Layout: FC<ILayoutProps> = ({ title, className, children }) => (
   <>
     <Meta title={title} />
-    <body className={openSans.className}>
+    <div className={`wrapper ${openSans.className}`}>
       <Header />
       <main className={`${className}-page`}>{children}</main>
-    </body>
+    </div>
   </>
 );
 

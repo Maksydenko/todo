@@ -8,7 +8,8 @@
 }
 
 html,
-body {
+body,
+#__next {
   height: 100%;
   min-width: $minWidth + px;
 }

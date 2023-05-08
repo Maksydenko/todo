@@ -1,6 +1,6 @@
 import { FC } from "react";
 
-import Meta from "@/components/meta/Meta";
+import Meta from "@/components/layout/Meta";
 import Header from "./Header/Header";
 
 import { Open_Sans } from "next/font/google";

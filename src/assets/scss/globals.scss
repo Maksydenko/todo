@@ -1,16 +1,16 @@
-// Connection of utils
+// Connection utils
 @import "base/utils.scss";
-// Connection of mixins
+// Connection mixins
 @import "base/mixins.scss";
 
-// Connection of Google fonts
+// Connection Google fonts
 // &display=swap
 @import url(https://fonts.googleapis.com/css?family=Bebas+Neue:regular&display=swap);
 
-// Connection of local fonts
+// Connection local fonts
 // @import "fonts/fonts";
 
-// Connection of icon fonts
+// Connection icon fonts
 @import "fonts/icons";
 
 // ============================================================================
@@ -172,11 +172,12 @@ body {
   }
 }
 
-// Connecting basic styles, templates and auxiliary classes
+// Connecting basic component styles
 @import "base.scss";
 
-// Connecting styles of individual blocks
-@import "@/components/layout/Header/Header.scss";
+// Connecting layout styles
+@import "@/components/layout/Layout.scss";
 
-@import "@/components/screens/home/Home.scss";
+// Connecting page styles
 @import "@/components/screens/404/404.scss";
+@import "@/components/screens/Home/Home.scss";

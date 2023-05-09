@@ -1,7 +1,11 @@
 import { useState, useEffect } from "react";
 import { useRouter, NextRouter } from "next/router";
 
-export const useRedirectToHomepage = (): number => {
+interface IUseRedirectToHomepage {
+  (): number;
+}
+
+export const useRedirectToHomepage: IUseRedirectToHomepage = () => {
   const [time, setTime] = useState(10);
   const router: NextRouter = useRouter();
 

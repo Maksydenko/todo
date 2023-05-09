@@ -8,7 +8,7 @@ const Page404: FC = () => {
   const time: number = useRedirectToHomepage();
 
   return (
-    <Layout title="Page not found" className="404">
+    <Layout title="404" className="404">
       <div className="page-not-found">
         <div className="page-not-found__container">
           <h1 className="page-not-found__title">404</h1>

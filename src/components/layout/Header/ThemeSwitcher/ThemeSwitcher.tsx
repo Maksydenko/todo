@@ -7,11 +7,7 @@ import {
 } from "@/components/layout/Header/ThemeSwitcher/useSwitchTheme";
 
 const ThemeSwitcher: FC = () => {
-  interface IUseSwitchTheme {
-    theme: string;
-    setTheme: Dispatch<SetStateAction<string>>;
-  }
-  const { theme, setTheme }: IUseSwitchTheme = useSwitchTheme();
+  const { theme, setTheme } = useSwitchTheme();
 
   const handleSetDark = (): void => setTheme(DARK);
   const handleSetLight = (): void => setTheme(LIGHT);

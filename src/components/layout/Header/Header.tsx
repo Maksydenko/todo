@@ -2,7 +2,6 @@ import { FC } from "react";
 import Link from "next/link";
 
 import ThemeSwitcher from "./ThemeSwitcher/ThemeSwitcher";
-import ScrollTop from "./ScrollTop/ScrollTop";
 
 const Header: FC = () => (
   <header className="header">
@@ -12,7 +11,6 @@ const Header: FC = () => (
       </Link>
       <ThemeSwitcher />
     </div>
-    <ScrollTop />
   </header>
 );
 

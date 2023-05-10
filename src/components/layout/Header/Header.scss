@@ -1,8 +1,12 @@
 @import "./ThemeSwitcher/ThemeSwitcher.scss";
-@import "./ScrollTop/ScrollTop.scss";
 
 .header {
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  backdrop-filter: blur(rem(5));
 
   // .header__container
 
@@ -10,7 +14,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    min-height: rem(70);
+    min-height: em(70, 40);
     font-size: rem(40);
   }
 

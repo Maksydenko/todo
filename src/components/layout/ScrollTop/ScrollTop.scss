@@ -1,0 +1,26 @@
+.scroll-top {
+  position: fixed;
+  z-index: 10;
+  bottom: em(40, 40);
+  right: em(20, 40);
+  padding: em(5, 40);
+  font-size: rem(40);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  // .scroll-top._hidden
+
+  &._hidden {
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  // .scroll-top__arrow-top
+
+  &__arrow-top {
+  }
+}

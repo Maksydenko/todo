@@ -9,11 +9,13 @@ const isDarkTheme =
 const defaultTheme = isDarkTheme ? DARK : LIGHT;
 
 interface IUseSwitchTheme {
-  theme: string;
-  setTheme: Dispatch<SetStateAction<string>>;
+  (): {
+    theme: string;
+    setTheme: Dispatch<SetStateAction<string>>;
+  };
 }
 
-export const useSwitchTheme = (): IUseSwitchTheme => {
+export const useSwitchTheme: IUseSwitchTheme = () => {
   // Set the theme from local storage or the default
   const [theme, setTheme] = useState(
     localStorage.getItem("theme") || defaultTheme

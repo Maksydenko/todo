@@ -14,12 +14,17 @@ body,
   min-width: $minWidth + px;
 }
 
+html[data-theme] {
+  body {
+    transition: color, background-color 0.3s ease 0s;
+  }
+}
+
 body {
   font-size: $fontSize;
   line-height: 1;
   color: $mainColor;
   background-color: $mainBg;
-  transition: color, background-color 0.3s ease 0s;
 }
 
 input,

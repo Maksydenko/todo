@@ -1,4 +1,4 @@
-import { FC, Dispatch, SetStateAction } from "react";
+import { FC } from "react";
 
 import {
   useSwitchTheme,
@@ -14,10 +14,9 @@ const ThemeSwitcher: FC = () => {
 
   return (
     <div className="header__theme-switcher">
-      {theme === DARK && (
+      {theme === DARK ? (
         <button className="_icon-sun" onClick={handleSetLight}></button>
-      )}
-      {theme === LIGHT && (
+      ) : (
         <button className="_icon-moon" onClick={handleSetDark}></button>
       )}
     </div>

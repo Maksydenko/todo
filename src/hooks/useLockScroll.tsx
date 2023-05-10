@@ -24,5 +24,8 @@ export const useLockScroll: IUseLockScroll = () => {
     };
   }, [isLockedScroll]);
 
-  return { isLockedScroll, setIsLockedScroll };
+  return {
+    isLockedScroll,
+    setIsLockedScroll,
+  };
 };

@@ -55,6 +55,7 @@ const Document = () => (
       <meta property="og:site_name" content="To do" />
       <link rel="apple-touch-icon" href="/todo/favicon.svg" />
       <link rel="icon" href="/todo/favicon.svg" />
+      <title></title>
     </Head>
     <body>
       <Main />

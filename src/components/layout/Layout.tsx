@@ -2,9 +2,9 @@ import { FC } from "react";
 
 import Meta from "@/components/layout/Meta";
 import Header from "./Header/Header";
+import ScrollTop from "./ScrollTop/ScrollTop";
 
 import { Open_Sans } from "next/font/google";
-import ScrollTop from "./ScrollTop/ScrollTop";
 
 const openSans = Open_Sans({ subsets: ["latin", "cyrillic-ext"] });
 

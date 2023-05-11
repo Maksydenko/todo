@@ -1,12 +1,10 @@
 import { Dispatch, SetStateAction, useState, useEffect } from "react";
+import { Theme } from "./theme.enum";
 
-export const DARK = "dark";
-export const LIGHT = "light";
-
+const isBrowser = typeof window !== "undefined";
 const isDarkTheme =
-  typeof window !== "undefined" &&
-  window.matchMedia("(prefers-color-scheme: dark)").matches;
-const defaultTheme = isDarkTheme ? DARK : LIGHT;
+  isBrowser && window.matchMedia("(prefers-color-scheme: dark)").matches;
+const defaultTheme = isDarkTheme ? Theme.Dark : Theme.Light;
 
 interface IUseSwitchTheme {
   (): {
@@ -27,5 +25,8 @@ export const useSwitchTheme: IUseSwitchTheme = () => {
     localStorage.setItem("theme", theme);
   }, [theme]);
 
-  return { theme, setTheme };
+  return {
+    theme,
+    setTheme,
+  };
 };

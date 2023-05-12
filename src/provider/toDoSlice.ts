@@ -57,13 +57,11 @@ interface ISelect {
 
 export const selectToDos: ISelect = (state) => state.toDo.toDos;
 
-const completedToDos: ISelect = (state) =>
+export const selectCompletedToDos: ISelect = (state) =>
   state.toDo.toDos.filter((toDo) => toDo.completed);
-export const selectCompletedToDos = completedToDos;
 
-const uncompletedToDos: ISelect = (state) =>
+export const selectUncompletedToDos: ISelect = (state) =>
   state.toDo.toDos.filter((toDo) => toDo.completed);
-export const selectUncompletedToDos = uncompletedToDos;
 
 // Reducer
 export default toDoSlice.reducer;

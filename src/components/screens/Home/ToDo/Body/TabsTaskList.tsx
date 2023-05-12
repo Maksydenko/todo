@@ -2,8 +2,8 @@ import { FC } from "react";
 import { useSelector } from "react-redux";
 
 import {
-  selectCompletedToDos,
   selectToDos,
+  selectCompletedToDos,
   selectUncompletedToDos,
 } from "@/provider/toDoSlice";
 

@@ -89,7 +89,7 @@ $adaptiveType: 1;
 
 // ============================================================================
 
-// Reset
+// Reset styles
 @import "base/reset.scss";
 
 // Body tag styles
@@ -172,6 +172,9 @@ body {
 
 // Connecting basic component styles
 @import "base.scss";
+
+// Connecting shared component styles
+@import "shared.scss";
 
 // Connecting layout styles
 @import "@/components/layout/Layout.scss";

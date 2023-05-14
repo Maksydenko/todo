@@ -1,7 +1,7 @@
 import { FC, ChangeEvent, useState } from "react";
 import { useDispatch } from "react-redux";
 
-import { changeToDo } from "@/provider/toDoSlice";
+import { changeToDo } from "@/provider/toDo/toDoSlice";
 
 import Popup from "@/components/base/Popup/Popup";
 

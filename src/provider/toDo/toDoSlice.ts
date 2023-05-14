@@ -17,7 +17,7 @@ export const toDoSlice = createSlice({
   name: "toDo",
   initialState,
   reducers: {
-    addToDo: (state, action: PayloadAction<string>) => {
+    addToDo: (state, action: PayloadAction<IToDo["text"]>) => {
       const newToDo = {
         id: Date.now(),
         text: action.payload,
@@ -25,11 +25,11 @@ export const toDoSlice = createSlice({
       };
       state.toDos.push(newToDo);
     },
-    removeToDo: (state, action: PayloadAction<number>) => {
+    removeToDo: (state, action: PayloadAction<IToDo["id"]>) => {
       const id = action.payload;
       state.toDos = state.toDos.filter((toDo) => toDo.id !== id);
     },
-    completeToDo: (state, action: PayloadAction<number>) => {
+    completeToDo: (state, action: PayloadAction<IToDo["id"]>) => {
       const id = action.payload;
       const index = state.toDos.findIndex((toDo) => toDo.id === id);
       state.toDos[index].completed = !state.toDos[index].completed;

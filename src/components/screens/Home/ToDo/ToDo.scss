@@ -7,7 +7,7 @@
   &__container {
     margin-bottom: rem(15);
 
-    & > div {
+    > div {
       padding: rem(20) rem(15);
       border-radius: rem(10);
       background-color: $toDoBg;

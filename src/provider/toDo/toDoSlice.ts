@@ -61,7 +61,7 @@ export const selectCompletedToDos: ISelect = (state) =>
   state.toDo.toDos.filter((toDo) => toDo.completed);
 
 export const selectUncompletedToDos: ISelect = (state) =>
-  state.toDo.toDos.filter((toDo) => toDo.completed);
+  state.toDo.toDos.filter((toDo) => !toDo.completed);
 
 // Reducer
 export default toDoSlice.reducer;

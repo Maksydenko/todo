@@ -28,7 +28,7 @@ const PopupChange: FC<IPopupChangeProps> = ({ toDo }) => {
   };
 
   return (
-    <Popup className="_input to-do" button={editButton}>
+    <Popup className="to-do" button={editButton}>
       <div className="task-list__popup-change">
         <span className="task-list__action _icon-pencil"></span>
         <input

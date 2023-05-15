@@ -51,17 +51,14 @@
     gap: rem(15);
   }
 
+  // .task-list__action
+
+  &__action {
+  }
+
   // .task-list__change-input
 
   &__change-input {
-    min-width: em(500);
-
-    @media (max-width: $mobile) {
-      min-width: em(300);
-    }
-
-    @media (max-width: $mobileSmall) {
-      min-width: auto;
-    }
+    @include responsiveValue("min-width", 500, 202);
   }
 }

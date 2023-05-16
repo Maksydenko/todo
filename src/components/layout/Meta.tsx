@@ -6,6 +6,7 @@ interface IMetaProps {
 }
 
 const Meta: FC<IMetaProps> = ({ title }) => {
+  // Get title
   interface IGetTitle {
     (title: string): string;
   }

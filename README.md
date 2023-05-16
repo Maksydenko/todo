@@ -12,7 +12,7 @@ Task management website
 ![CSS](https://skills.thijs.gg/icons?i=css)
 ![SCSS](https://skills.thijs.gg/icons?i=scss)
 ![JavaScript](https://skills.thijs.gg/icons?i=javascript)
-![TypeScript](https://skills.thijs.gg/icons?i=ttypescript)
+![TypeScript](https://skills.thijs.gg/icons?i=typescript)
 ![React](https://skills.thijs.gg/icons?i=react)
 ![Redux](https://skills.thijs.gg/icons?i=redux)
 ![Next.js](https://skills.thijs.gg/icons?i=nextjs)

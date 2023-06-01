@@ -5,9 +5,14 @@ import { useWindowSize } from "@/hooks/useWindowSize";
 interface FullScreenProps {
   className: string;
   children: JSX.Element;
+  background?: JSX.Element;
 }
 
-const FullScreen: FC<FullScreenProps> = ({ className, children }) => {
+const FullScreen: FC<FullScreenProps> = ({
+  className,
+  children,
+  background,
+}) => {
   const [height, setHeight] = useState("100vh");
 
   const handleResizeHeight = () => {
@@ -23,6 +28,7 @@ const FullScreen: FC<FullScreenProps> = ({ className, children }) => {
   return (
     <section className={`${className} full-screen`} style={styleMinHeight}>
       <div className="full-screen__body">{children}</div>
+      {background}
     </section>
   );
 };

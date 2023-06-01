@@ -5,9 +5,8 @@ interface IUseWindowSize {
 }
 
 export const useWindowSize: IUseWindowSize = (handler) => {
-  handler();
-
   useEffect(() => {
+    handler();
     window.addEventListener("resize", handler);
 
     return () => {

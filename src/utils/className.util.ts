@@ -11,7 +11,7 @@ export const getModifierClassName: IGetModifierClassName = (
   isActive,
   className,
   modifier = "active",
-  noNamespace = false
+  noNamespace
 ) =>
   `${className}${
     isActive ? ` ${noNamespace ? "" : className}_${modifier}` : ""

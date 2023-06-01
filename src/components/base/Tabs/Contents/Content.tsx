@@ -2,12 +2,12 @@ import { FC } from "react";
 
 import { ITab } from "../tab.interface";
 
-interface IContentProps {
+interface ContentProps {
   tab: ITab;
   activeTab: number;
 }
 
-const Content: FC<IContentProps> = ({ tab, activeTab }) =>
+const Content: FC<ContentProps> = ({ tab, activeTab }) =>
   activeTab === tab.id ? (
     <div className="tabs__content">{tab.content}</div>
   ) : null;

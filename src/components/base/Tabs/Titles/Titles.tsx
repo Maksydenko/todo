@@ -4,13 +4,13 @@ import Title from "./Title";
 
 import { ITab } from "../tab.interface";
 
-interface ITitlesProps {
+interface TitlesProps {
   tabs: ITab[];
   activeTab: number;
   setActiveTab: Dispatch<SetStateAction<number>>;
 }
 
-const Titles: FC<ITitlesProps> = ({ tabs, activeTab, setActiveTab }) => (
+const Titles: FC<TitlesProps> = ({ tabs, activeTab, setActiveTab }) => (
   <ul className="tabs__titles">
     {tabs.map((tab) => (
       <Title

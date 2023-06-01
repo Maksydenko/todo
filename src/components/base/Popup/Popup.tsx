@@ -4,13 +4,13 @@ import { useLockScroll } from "@/hooks/useLockScroll";
 
 import Body from "./Body";
 
-interface IPopupProps {
+interface PopupProps {
   className: string;
   children: JSX.Element;
   button: JSX.Element;
 }
 
-const Popup: FC<IPopupProps> = ({ className, children, button }) => {
+const Popup: FC<PopupProps> = ({ className, children, button }) => {
   const { isLockedScroll, setIsLockedScroll } = useLockScroll();
   const handleClick = (): void => setIsLockedScroll(!isLockedScroll);
 

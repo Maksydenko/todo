@@ -7,11 +7,11 @@ import Popup from "@/components/base/Popup/Popup";
 
 import { IToDo } from "@/interfaces/toDo.interface";
 
-interface IPopupRemoveProps {
+interface PopupRemoveProps {
   toDo: IToDo;
 }
 
-const PopupRemove: FC<IPopupRemoveProps> = ({ toDo }) => {
+const PopupRemove: FC<PopupRemoveProps> = ({ toDo }) => {
   const dispatch = useDispatch();
   const removeButton = <span className="to-do__action _icon-bin"></span>;
 

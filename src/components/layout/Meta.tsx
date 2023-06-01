@@ -1,11 +1,11 @@
 import { FC } from "react";
 import Head from "next/head";
 
-interface IMetaProps {
+interface MetaProps {
   title: string;
 }
 
-const Meta: FC<IMetaProps> = ({ title }) => {
+const Meta: FC<MetaProps> = ({ title }) => {
   // Get title
   interface IGetTitle {
     (title: string): string;

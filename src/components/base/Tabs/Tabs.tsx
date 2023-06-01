@@ -5,13 +5,13 @@ import Contents from "./Contents/Contents";
 
 import { ITab } from "./tab.interface";
 
-interface ITabsProps {
+interface TabsProps {
   className: string;
   tabs: ITab[];
   defaultTab?: number;
 }
 
-const Tabs: FC<ITabsProps> = ({ className, tabs, defaultTab = 0 }) => {
+const Tabs: FC<TabsProps> = ({ className, tabs, defaultTab = 0 }) => {
   const [activeTab, setActiveTab] = useState(tabs[defaultTab].id);
 
   return (

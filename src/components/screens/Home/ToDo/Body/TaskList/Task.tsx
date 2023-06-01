@@ -6,11 +6,11 @@ import Checkbox from "./Checkbox";
 import PopupChange from "./Popups/PopupChange";
 import PopupRemove from "./Popups/PopupRemove";
 
-interface ITaskProps {
+interface TaskProps {
   toDo: IToDo;
 }
 
-const Task: FC<ITaskProps> = ({ toDo }) => (
+const Task: FC<TaskProps> = ({ toDo }) => (
   <li
     key={toDo.id}
     className={`to-do__item task-list__item${

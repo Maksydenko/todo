@@ -7,11 +7,11 @@ import Popup from "@/components/base/Popup/Popup";
 
 import { IToDo } from "@/interfaces/toDo.interface";
 
-interface IPopupChangeProps {
+interface PopupChangeProps {
   toDo: IToDo;
 }
 
-const PopupChange: FC<IPopupChangeProps> = ({ toDo }) => {
+const PopupChange: FC<PopupChangeProps> = ({ toDo }) => {
   const { id, text } = toDo;
   const [changedText, setChangedText] = useState(text);
   const dispatch = useDispatch();

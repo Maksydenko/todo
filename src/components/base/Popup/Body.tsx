@@ -1,11 +1,11 @@
 import { FC, MouseEvent, useRef } from "react";
 
-interface IBodyProps {
+interface BodyProps {
   children: JSX.Element;
   onClick(): void;
 }
 
-const Body: FC<IBodyProps> = ({ children, onClick }) => {
+const Body: FC<BodyProps> = ({ children, onClick }) => {
   const popupBoxRef = useRef<HTMLDivElement>(null);
 
   // Handle click

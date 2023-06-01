@@ -8,13 +8,13 @@ import { Open_Sans } from "next/font/google";
 
 const openSans = Open_Sans({ subsets: ["latin", "cyrillic-ext"] });
 
-interface ILayoutProps {
+interface LayoutProps {
   title: string;
   className: string;
   children: JSX.Element;
 }
 
-const Layout: FC<ILayoutProps> = ({ title, className, children }) => (
+const Layout: FC<LayoutProps> = ({ title, className, children }) => (
   <>
     <Meta title={title} />
     <div className={`wrapper ${openSans.className}`}>

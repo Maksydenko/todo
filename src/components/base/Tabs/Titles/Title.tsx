@@ -4,14 +4,14 @@ import { getModifierClassName } from "@/utils/className.util";
 
 import { ITab } from "../tab.interface";
 
-interface ITitleProps {
+interface TitleProps {
   tabsLength: number;
   tab: ITab;
   activeTab: number;
   setActiveTab: Dispatch<SetStateAction<number>>;
 }
 
-const Title: FC<ITitleProps> = ({
+const Title: FC<TitleProps> = ({
   tabsLength,
   tab,
   activeTab,

@@ -5,11 +5,11 @@ import { completeToDo } from "@/provider/toDo/toDoSlice";
 
 import { IToDo } from "@/interfaces/toDo.interface";
 
-interface ICheckboxProps {
+interface CheckboxProps {
   toDo: IToDo;
 }
 
-const Checkbox: FC<ICheckboxProps> = ({ toDo }) => {
+const Checkbox: FC<CheckboxProps> = ({ toDo }) => {
   const dispatch = useDispatch();
 
   return (

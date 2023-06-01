@@ -4,12 +4,12 @@ import Content from "./Content";
 
 import { ITab } from "../tab.interface";
 
-interface IContentsProps {
+interface ContentsProps {
   tabs: ITab[];
   activeTab: number;
 }
 
-const Contents: FC<IContentsProps> = ({ tabs, activeTab }) => (
+const Contents: FC<ContentsProps> = ({ tabs, activeTab }) => (
   <div className="tabs__contents">
     {tabs.map((tab) => (
       <Content key={tab.id} tab={tab} activeTab={activeTab} />

@@ -1,4 +1,4 @@
-interface IGetModifierClassName {
+interface IHandleClassName {
   (
     isActive: boolean,
     className: string,
@@ -7,7 +7,7 @@ interface IGetModifierClassName {
   ): string;
 }
 
-export const getModifierClassName: IGetModifierClassName = (
+export const handleClassName: IHandleClassName = (
   isActive,
   className,
   modifier = "active",

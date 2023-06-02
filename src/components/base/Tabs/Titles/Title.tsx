@@ -1,6 +1,6 @@
 import { FC, Dispatch, SetStateAction } from "react";
 
-import { getModifierClassName } from "@/utils/className.util";
+import { handleClassName } from "@/utils/className.util";
 
 import { ITab } from "../tab.interface";
 
@@ -25,7 +25,7 @@ const Title: FC<TitleProps> = ({
 
   return (
     <li
-      className={getModifierClassName(activeTab === tab.id, "tabs__title")}
+      className={handleClassName(activeTab === tab.id, "tabs__title")}
       style={styleWidth}
       onClick={handleClick}
     >

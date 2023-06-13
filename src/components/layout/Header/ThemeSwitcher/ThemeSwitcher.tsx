@@ -6,8 +6,11 @@ import { Theme } from "./theme.enum";
 const ThemeSwitcher: FC = () => {
   const { theme, setTheme } = useSwitchTheme();
 
-  const handleSetDark = (): void => setTheme(Theme.Dark);
-  const handleSetLight = (): void => setTheme(Theme.Light);
+  interface IHandleSetTheme {
+    (): void;
+  }
+  const handleSetDark: IHandleSetTheme = () => setTheme(Theme.Dark);
+  const handleSetLight: IHandleSetTheme = () => setTheme(Theme.Light);
 
   return (
     <div className="header__theme-switcher">

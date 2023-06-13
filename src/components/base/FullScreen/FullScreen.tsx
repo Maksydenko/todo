@@ -1,6 +1,6 @@
 import { FC, useState } from "react";
 
-import { useWindowSize } from "@/hooks/useWindowSize";
+import { useWindowResize } from "@/hooks/useWindowResize";
 
 interface FullScreenProps {
   className: string;
@@ -19,7 +19,7 @@ const FullScreen: FC<FullScreenProps> = ({
     const windowHeight = window.innerHeight;
     setHeight(`${windowHeight}px`);
   };
-  useWindowSize(handleResizeHeight);
+  useWindowResize(handleResizeHeight);
 
   const styleMinHeight = {
     minHeight: height,

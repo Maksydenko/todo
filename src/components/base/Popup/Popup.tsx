@@ -1,6 +1,6 @@
 import { FC } from "react";
 
-import { useLockScroll } from "@/hooks/useLockScroll";
+import { useScrollLock } from "@/hooks/useScrollLock";
 
 import Body from "./Body";
 
@@ -11,8 +11,8 @@ interface PopupProps {
 }
 
 const Popup: FC<PopupProps> = ({ className, children, button }) => {
-  const { isLockedScroll, setIsLockedScroll } = useLockScroll();
-  const handleClick = (): void => setIsLockedScroll(!isLockedScroll);
+  const { isScrollLocked, setIsScrollLocked } = useScrollLock();
+  const handleClick = (): void => setIsScrollLocked(!isScrollLocked);
 
   return (
     <div className={`${className}__popup popup`}>
@@ -22,7 +22,7 @@ const Popup: FC<PopupProps> = ({ className, children, button }) => {
       >
         {button}
       </button>
-      {isLockedScroll && <Body onClick={handleClick}>{children}</Body>}
+      {isScrollLocked && <Body onClick={handleClick}>{children}</Body>}
     </div>
   );
 };

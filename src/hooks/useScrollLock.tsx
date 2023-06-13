@@ -1,19 +1,19 @@
 import { Dispatch, SetStateAction, useState, useEffect } from "react";
 
-interface IUseLockScroll {
+interface IUseScrollLock {
   (): {
-    isLockedScroll: boolean;
-    setIsLockedScroll: Dispatch<SetStateAction<boolean>>;
+    isScrollLocked: boolean;
+    setIsScrollLocked: Dispatch<SetStateAction<boolean>>;
   };
 }
 
-export const useLockScroll: IUseLockScroll = () => {
-  const [isLockedScroll, setIsLockedScroll] = useState(false);
+export const useScrollLock: IUseScrollLock = () => {
+  const [isScrollLocked, setIsScrollLocked] = useState(false);
 
   useEffect(() => {
     const body: HTMLElement = document.body;
 
-    if (isLockedScroll) {
+    if (isScrollLocked) {
       body.classList.add("lock");
     } else {
       body.classList.remove("lock");
@@ -22,10 +22,10 @@ export const useLockScroll: IUseLockScroll = () => {
     return () => {
       body.classList.remove("lock");
     };
-  }, [isLockedScroll]);
+  }, [isScrollLocked]);
 
   return {
-    isLockedScroll,
-    setIsLockedScroll,
+    isScrollLocked,
+    setIsScrollLocked,
   };
 };

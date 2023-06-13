@@ -4,7 +4,7 @@ import { useWindowResize } from "@/hooks/useWindowResize";
 
 interface FullScreenProps {
   className: string;
-  children: JSX.Element;
+  children?: JSX.Element;
   background?: JSX.Element;
 }
 

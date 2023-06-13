@@ -1,24 +1,33 @@
-import { FC } from "react";
+import { FC, useState, useEffect } from "react";
 
-import { useSwitchTheme } from "@/components/layout/Header/ThemeSwitcher/useSwitchTheme";
+import { useThemeSwitch } from "@/components/layout/Header/ThemeSwitcher/useThemeSwitch";
+
 import { Theme } from "./theme.enum";
 
 const ThemeSwitcher: FC = () => {
-  const { theme, setTheme } = useSwitchTheme();
+  const { theme, setTheme } = useThemeSwitch();
+  const [switcherValue, setSwitcherValue] = useState("");
+  const isDarkTheme = theme === Theme.Dark;
 
-  interface IHandleSetTheme {
-    (): void;
-  }
-  const handleSetDark: IHandleSetTheme = () => setTheme(Theme.Dark);
-  const handleSetLight: IHandleSetTheme = () => setTheme(Theme.Light);
+  const handleSetTheme = () => {
+    if (isDarkTheme) {
+      setTheme(Theme.Light);
+    } else {
+      setTheme(Theme.Dark);
+    }
+  };
+
+  useEffect(() => {
+    if (isDarkTheme) {
+      setSwitcherValue("_icon-sun");
+    } else {
+      setSwitcherValue("_icon-moon");
+    }
+  }, [theme]);
 
   return (
     <div className="header__theme-switcher">
-      {theme === Theme.Dark ? (
-        <button className="_icon-sun" onClick={handleSetLight}></button>
-      ) : (
-        <button className="_icon-moon" onClick={handleSetDark}></button>
-      )}
+      <button className={switcherValue} onClick={handleSetTheme}></button>
     </div>
   );
 };

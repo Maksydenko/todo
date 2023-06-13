@@ -1,13 +1,13 @@
 import { FC } from "react";
 
-import { useScrollLock } from "@/hooks/useScrollLock";
-
 import Body from "./Body";
+
+import { useScrollLock } from "@/hooks/useScrollLock";
 
 interface PopupProps {
   className: string;
   children: JSX.Element;
-  button: JSX.Element;
+  button: JSX.Element | string;
 }
 
 const Popup: FC<PopupProps> = ({ className, children, button }) => {

@@ -12,5 +12,5 @@ export const useWindowSize: IUseWindowSize = (handler) => {
     return () => {
       window.removeEventListener("resize", handler);
     };
-  }, []);
+  }, [handler]);
 };

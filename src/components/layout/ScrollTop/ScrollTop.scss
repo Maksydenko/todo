@@ -5,18 +5,20 @@
   right: em(20, 40);
   padding: em(5, 40);
   font-size: rem(40);
+  opacity: 0;
+  visibility: hidden;
   transition: all 0.3s ease 0s;
-  cursor: pointer;
 
-  &:hover {
-    opacity: 0.5;
-  }
+  // .menu__scroll-top_active
 
-  // .scroll-top._hidden
+  &_active {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s ease 0s;
 
-  &._hidden {
-    visibility: hidden;
-    opacity: 0;
+    &:hover {
+      opacity: 0.5;
+    }
   }
 
   // .scroll-top__arrow-top

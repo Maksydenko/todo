@@ -2,6 +2,8 @@
   // .task-list__item
 
   &__item {
+    // .task-list__item_completed
+
     &_completed {
       .task-list__checkbox {
         opacity: 0.5;

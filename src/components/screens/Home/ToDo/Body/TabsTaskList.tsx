@@ -15,7 +15,7 @@ const TabsTaskList: FC = () => {
   const completedToDos = useSelector(selectCompletedToDos);
   const uncompletedToDos = useSelector(selectUncompletedToDos);
 
-  const numberAllTasks: number = allToDos.length;
+  const numberAllTasks = allToDos.length;
 
   const tabs = [
     {

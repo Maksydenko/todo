@@ -19,11 +19,12 @@ const InputTask: FC = () => {
     (e: FormEvent<HTMLFormElement>): void;
   }
   const handleSubmit: IHandleSubmit = (e) => {
+    e.preventDefault();
+
     if (taskText) {
       dispatch(addToDo(taskText));
       setTaskText("");
     }
-    e.preventDefault();
   };
 
   return (

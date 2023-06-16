@@ -31,10 +31,7 @@ const Popup: FC<PopupProps> = ({ className, modifier, children, button }) => {
 
   return (
     <div className={`${modifiedClassName} popup`}>
-      <button
-        className={`${className}__popup-button popup__button`}
-        onClick={handleClick}
-      >
+      <button className="popup__button" onClick={handleClick}>
         {button}
       </button>
       <Transition condition={isScrollLocked} className="popup">

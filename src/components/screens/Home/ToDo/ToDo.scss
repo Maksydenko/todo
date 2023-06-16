@@ -96,6 +96,10 @@
   // .to-do__popup
 
   &__popup {
+    .popup__button {
+      display: block;
+      margin: 0 auto;
+    }
   }
 
   // .to-do__remove-button
@@ -110,10 +114,14 @@
     color: #ffffff;
     background-color: #ff0000;
 
-    &_transparent-bg:hover {
-      opacity: 1 !important;
-      color: #333333;
-      background-color: transparent;
+    &_transparent-bg {
+      transition: color, background-color 0.3s ease 0s !important;
+
+      &:hover {
+        opacity: 1 !important;
+        color: #333333;
+        background-color: transparent;
+      }
     }
   }
 
@@ -122,13 +130,6 @@
   &__warning-text {
     margin-bottom: em(20, 18);
     font-size: rem(18);
-  }
-
-  // .to-do__popup-button
-
-  &__popup-button {
-    display: block;
-    margin: 0 auto;
   }
 
   button {

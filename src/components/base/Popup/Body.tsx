@@ -12,8 +12,11 @@ const Body: FC<BodyProps> = ({ children, onClick }) => {
   interface IHandleClick {
     ({ target }: MouseEvent<EventTarget>): false | void;
   }
-  const handleClick: IHandleClick = ({ target }) =>
-    !popupBoxRef.current?.contains(target as Node) && onClick();
+  const handleClick: IHandleClick = ({ target }) => {
+    if (!popupBoxRef.current?.contains(target as Node)) {
+      onClick();
+    }
+  };
 
   return (
     <div className="popup__body" onClick={handleClick}>

@@ -7,9 +7,9 @@ interface ContentProps {
   activeTab: number;
 }
 
-const Content: FC<ContentProps> = ({ tab, activeTab }) =>
-  activeTab === tab.id ? (
-    <div className="tabs__content">{tab.content}</div>
-  ) : null;
+const Content: FC<ContentProps> = ({ tab: { id, content }, activeTab }) => {
+  const isActive = activeTab === id;
 
+  return isActive ? <div className="tabs__content">{content}</div> : null;
+};
 export default Content;

@@ -9,12 +9,12 @@ interface ContentsProps {
   activeTab: number;
 }
 
-const Contents: FC<ContentsProps> = ({ tabs, activeTab }) => (
-  <div className="tabs__contents">
-    {tabs.map((tab) => (
-      <Content key={tab.id} tab={tab} activeTab={activeTab} />
-    ))}
-  </div>
-);
+const Contents: FC<ContentsProps> = ({ tabs, activeTab }) => {
+  const contentItems = tabs.map((tab) => (
+    <Content key={tab.id} tab={tab} activeTab={activeTab} />
+  ));
+
+  return <div className="tabs__contents">{contentItems}</div>;
+};
 
 export default Contents;

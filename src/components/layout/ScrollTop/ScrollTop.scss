@@ -5,15 +5,15 @@
   right: em(20, 40);
   padding: em(5, 40);
   font-size: rem(40);
-  opacity: 0;
   visibility: hidden;
+  opacity: 0;
   transition: all 0.3s ease 0s;
 
   // .scroll-top_active
 
   &_active {
-    opacity: 1;
     visibility: visible;
+    opacity: 1;
     transition: opacity 0.3s ease 0s;
 
     &:hover {

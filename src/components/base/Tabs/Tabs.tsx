@@ -15,7 +15,8 @@ interface TabsProps {
 }
 
 const Tabs: FC<TabsProps> = ({ className, modifier, tabs, defaultTab = 0 }) => {
-  const [activeTab, setActiveTab] = useState(tabs[defaultTab].id);
+  const idDefaultTab = tabs[defaultTab].id;
+  const [activeTab, setActiveTab] = useState(idDefaultTab);
 
   const modifiedClassName = handleClassName(
     !!modifier,

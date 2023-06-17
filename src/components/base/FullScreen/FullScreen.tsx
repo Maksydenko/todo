@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, ReactNode } from "react";
 
 import { useFullHeight } from "./useFullHeight";
 
@@ -7,8 +7,8 @@ import { handleClassName } from "@/utils/className.util";
 interface FullScreenProps {
   className: string;
   modifier?: string;
-  children?: JSX.Element;
-  background?: JSX.Element;
+  children?: ReactNode;
+  background?: ReactNode;
 }
 
 const FullScreen: FC<FullScreenProps> = ({

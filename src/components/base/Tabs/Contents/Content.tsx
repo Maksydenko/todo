@@ -3,13 +3,11 @@ import { FC } from "react";
 import { ITab } from "../tab.interface";
 
 interface ContentProps {
-  tab: ITab;
-  activeTab: number;
+  content: ITab["content"];
 }
 
-const Content: FC<ContentProps> = ({ tab: { id, content }, activeTab }) => {
-  const isActive = activeTab === id;
+const Content: FC<ContentProps> = ({ content }) => (
+  <div className="tabs__content">{content}</div>
+);
 
-  return isActive ? <div className="tabs__content">{content}</div> : null;
-};
 export default Content;

@@ -1,7 +1,7 @@
 import { Dispatch, SetStateAction, useState, useEffect } from "react";
 
 import { Theme } from "./theme.enum";
-import { isBrowser } from "@/constants/isBrowser";
+import { isBrowser } from "@/constants/isBrowser.const";
 
 const isDarkTheme =
   isBrowser && window.matchMedia("(prefers-color-scheme: dark)").matches;

@@ -1,4 +1,4 @@
-import { FC, ReactNode } from "react";
+import { FC } from "react";
 import { CSSTransition } from "react-transition-group";
 
 import { handleClassName } from "@/utils/className.util";
@@ -7,7 +7,7 @@ interface TransitionProps {
   condition: boolean;
   className: string;
   modifier?: string;
-  children: ReactNode;
+  children: JSX.Element | JSX.Element[];
   timeout?: number;
   unmountOnExit?: boolean;
 }

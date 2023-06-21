@@ -6,15 +6,11 @@ interface MetaProps {
 }
 
 const Meta: FC<MetaProps> = ({ title }) => {
-  // Get title
-  interface IGetTitle {
-    (title: string): string;
-  }
-  const getTitle: IGetTitle = (title) => `${title} | To do`;
+  const modifiedTitle = `${title} — Next`;
 
   return (
     <Head>
-      <title>{getTitle(title)}</title>
+      <title>{modifiedTitle}</title>
     </Head>
   );
 };

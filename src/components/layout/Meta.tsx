@@ -6,7 +6,7 @@ interface MetaProps {
 }
 
 const Meta: FC<MetaProps> = ({ title }) => {
-  const modifiedTitle = `${title} — Next`;
+  const modifiedTitle = `${title} — To do`;
 
   return (
     <Head>

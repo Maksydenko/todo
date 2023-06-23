@@ -13,7 +13,9 @@ const Body: FC<BodyProps> = ({ children, onClick }) => {
     ({ target }: MouseEvent<EventTarget>): false | void;
   }
   const handleClick: IHandleClick = ({ target }) => {
-    if (!popupBoxRef.current?.contains(target as Node)) {
+    const popupBoxElement = popupBoxRef.current;
+
+    if (!popupBoxElement?.contains(target as Node)) {
       onClick();
     }
   };

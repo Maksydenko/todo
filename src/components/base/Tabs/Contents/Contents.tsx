@@ -2,7 +2,7 @@ import { FC } from "react";
 
 import Content from "./Content";
 
-import { ITab } from "../../../../interfaces/tab.interface";
+import { ITab } from "../tab.interface";
 
 interface ContentsProps {
   tabs: ITab[];

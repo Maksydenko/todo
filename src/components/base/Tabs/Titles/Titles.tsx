@@ -2,7 +2,7 @@ import { FC, Dispatch, SetStateAction } from "react";
 
 import Title from "./Title";
 
-import { ITab } from "../../../../interfaces/tab.interface";
+import { ITab } from "../tab.interface";
 
 interface TitlesProps {
   tabs: ITab[];

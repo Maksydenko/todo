@@ -2,7 +2,7 @@ import { FC, Dispatch, SetStateAction } from "react";
 
 import { handleClassName } from "@/utils/className.util";
 
-import { ITab } from "../../../../interfaces/tab.interface";
+import { ITab } from "../tab.interface";
 
 interface TitleProps {
   tabsLength: number;

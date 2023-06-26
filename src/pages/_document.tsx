@@ -50,7 +50,7 @@ const Document = () => (
       />
       <meta property="og:image:alt" content="To do" />
       {/* Link to the current page */}
-      <meta property="og:url" content="https://maksydenko.github.io/todo/" />
+      <meta property="og:url" content="https://todo-maksydenko.vercel.app/" />
       {/* Name of the site */}
       <meta property="og:site_name" content="To do" />
       <link rel="apple-touch-icon" href="/favicon.svg" />

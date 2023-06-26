@@ -2,7 +2,7 @@ import { FC, Dispatch, SetStateAction } from "react";
 
 import { handleClassName } from "@/utils/className.util";
 
-import { ITab } from "../tab.interface";
+import { ITab } from "../../../../interfaces/tab.interface";
 
 interface TitleProps {
   tabsLength: number;
@@ -24,7 +24,9 @@ const Title: FC<TitleProps> = ({
   interface IHandleClick {
     (): void;
   }
-  const handleClick: IHandleClick = () => setActiveTab(id);
+  const handleClick: IHandleClick = () => {
+    setActiveTab(id);
+  };
 
   const modifiedClassName = handleClassName(isActive, "tabs__title");
 

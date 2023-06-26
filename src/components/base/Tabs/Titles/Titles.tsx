@@ -2,7 +2,7 @@ import { FC, Dispatch, SetStateAction } from "react";
 
 import Title from "./Title";
 
-import { ITab } from "../tab.interface";
+import { ITab } from "../../../../interfaces/tab.interface";
 
 interface TitlesProps {
   tabs: ITab[];
@@ -11,15 +11,20 @@ interface TitlesProps {
 }
 
 const Titles: FC<TitlesProps> = ({ tabs, activeTab, setActiveTab }) => {
-  const titleItems = tabs.map((tab) => (
-    <Title
-      key={tab.id}
-      tabsLength={tabs.length}
-      tab={tab}
-      activeTab={activeTab}
-      setActiveTab={setActiveTab}
-    />
-  ));
+  const titleItems = tabs.map((tab) => {
+    const { id } = tab;
+    const { length } = tabs;
+
+    return (
+      <Title
+        key={id}
+        tabsLength={length}
+        tab={tab}
+        activeTab={activeTab}
+        setActiveTab={setActiveTab}
+      />
+    );
+  });
 
   return <ul className="tabs__titles">{titleItems}</ul>;
 };

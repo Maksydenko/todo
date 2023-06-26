@@ -6,7 +6,9 @@ Task management website
 
 📅 **Date:** April 2023
 
-🔗 **Webpage:** [link](https://maksydenko.github.io/todo/)
+🔗 **Webpage:** [link](https://todo-maksydenko.vercel.app/)
+
+🔗 **Mirror:** [link](https://maksydenko.github.io/todo/)
 
 ![HTML](https://skills.thijs.gg/icons?i=html)
 ![CSS](https://skills.thijs.gg/icons?i=css)

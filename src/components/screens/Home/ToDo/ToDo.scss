@@ -7,7 +7,7 @@
   &__container {
     margin-bottom: rem(15);
 
-    > div {
+    > * {
       padding: rem(20) rem(15);
       border-radius: rem(10);
       background-color: $toDoBg;
@@ -29,13 +29,8 @@
   &__item {
     display: flex;
     align-items: center;
-    gap: rem(20);
     padding: rem(20) 0;
     line-height: 1.3;
-
-    @media (max-width: $mobile) {
-      gap: rem(15);
-    }
 
     &:not(:first-child) {
       padding-top: rem(15);
@@ -47,12 +42,22 @@
       border-bottom: rem(1) solid $bdColor;
     }
 
-    > *:first-child {
-      padding-left: rem(5);
-    }
+    > * {
+      &:first-child {
+        padding-left: rem(5);
+      }
 
-    > *:last-child {
-      padding-right: rem(5);
+      &:last-child {
+        padding-right: rem(5);
+      }
+
+      &:not(:last-child) {
+        margin-right: rem(20);
+
+        @media (max-width: $mobile) {
+          margin-right: rem(15);
+        }
+      }
     }
 
     [class*="__checkbox"] {
@@ -114,7 +119,9 @@
     color: #ffffff;
     background-color: #ff0000;
 
-    &_transparent-bg {
+    // .to-do__remove-button_transparent
+
+    &_transparent {
       transition: color, background-color 0.3s ease 0s !important;
 
       &:hover {

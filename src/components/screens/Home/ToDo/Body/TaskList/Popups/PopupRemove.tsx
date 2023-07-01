@@ -22,7 +22,7 @@ const PopupRemove: FC<PopupRemoveProps> = ({ toDo }) => {
           «{toDo.text}»‎ will be permanently removed!
         </p>
         <button
-          className="to-do__remove-button to-do__remove-button_transparent-bg task-list__remove-button"
+          className="to-do__remove-button to-do__remove-button_transparent task-list__remove-button"
           onClick={() => dispatch(removeToDo(toDo.id))}
         >
           Remove task

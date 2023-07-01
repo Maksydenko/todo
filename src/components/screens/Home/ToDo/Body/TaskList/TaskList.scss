@@ -50,7 +50,10 @@
   &__popup-change {
     display: flex;
     align-items: center;
-    gap: rem(15);
+
+    > *:not(:last-child) {
+      margin-right: em(15);
+    }
   }
 
   // .task-list__action

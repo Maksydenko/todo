@@ -17,25 +17,28 @@ export const toDoSlice = createSlice({
   name: "toDo",
   initialState,
   reducers: {
-    addToDo: (state, action: PayloadAction<IToDo["text"]>) => {
+    addToDo: (state, { payload }: PayloadAction<IToDo["text"]>) => {
       const newToDo = {
         id: Date.now(),
-        text: action.payload,
+        text: payload,
         completed: false,
       };
       state.toDos.push(newToDo);
     },
-    removeToDo: (state, action: PayloadAction<IToDo["id"]>) => {
-      const id = action.payload;
+    removeToDo: (state, { payload }: PayloadAction<IToDo["id"]>) => {
+      const id = payload;
       state.toDos = state.toDos.filter((toDo) => toDo.id !== id);
     },
-    completeToDo: (state, action: PayloadAction<IToDo["id"]>) => {
-      const id = action.payload;
+    completeToDo: (state, { payload }: PayloadAction<IToDo["id"]>) => {
+      const id = payload;
       const index = state.toDos.findIndex((toDo) => toDo.id === id);
       state.toDos[index].completed = !state.toDos[index].completed;
     },
-    changeToDo: (state, action: PayloadAction<Omit<IToDo, "completed">>) => {
-      const { id, text } = action.payload;
+    changeToDo: (
+      state,
+      { payload }: PayloadAction<Omit<IToDo, "completed">>
+    ) => {
+      const { id, text } = payload;
       const index = state.toDos.findIndex((toDo) => toDo.id === id);
       state.toDos[index].text = text;
     },

@@ -5,7 +5,7 @@ import {
   selectToDos,
   selectCompletedToDos,
   selectUncompletedToDos,
-} from "@/provider/toDo/toDoSlice";
+} from "@/store/toDo/toDo.slice";
 
 import Tabs from "@/components/base/Tabs/Tabs";
 import TaskList from "./TaskList/TaskList";

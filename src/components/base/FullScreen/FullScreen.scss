@@ -2,6 +2,11 @@
   position: relative;
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
+
+  @supports (min-height: 100svh) {
+    min-height: 100svh;
+  }
 
   // .full-screen__body
 
@@ -15,7 +20,7 @@
     z-index: 1;
     padding: rem(20);
 
-    + * {
+    + div {
       img,
       iframe,
       video {
